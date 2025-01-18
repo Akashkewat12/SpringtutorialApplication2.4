@@ -52,6 +52,12 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 
+<!--      model mapper is used to convert any type of class in object use this dependency-->
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>3.0.0</version>
+		</dependency>
 
 
 		<dependency>
