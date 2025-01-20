@@ -1,10 +1,9 @@
 package com.spring.Springtutorial.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -15,6 +14,8 @@ import java.time.LocalDate;
 public class EmployeeDTO {
 
     private Long id;
+
+    @NotNull(message = "Required field in Employee : name")
     private String name;
     private String email;
     private Integer age;

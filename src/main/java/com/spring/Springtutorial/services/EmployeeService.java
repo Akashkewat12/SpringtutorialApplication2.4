@@ -40,11 +40,11 @@ public class EmployeeService {
                 .collect(Collectors.toList());
     }
 
-    public EmployeeDTO createNewEmployee(EmployeeEntity inputEmployee) {
+    public EmployeeDTO createNewEmployee(EmployeeDTO inputEmployee) {
         // to check if user is admin
         // log something
         EmployeeEntity toSaveEntity=modelMapper.map(inputEmployee,EmployeeEntity.class);
-        EmployeeEntity savedEmployeeEntity=employeeRepository.save(inputEmployee);
+        EmployeeEntity savedEmployeeEntity=employeeRepository.save(toSaveEntity);
         return modelMapper.map(savedEmployeeEntity, EmployeeDTO.class);
     }
     public EmployeeDTO updateEmployeeById(Long employeeId, EmployeeDTO employeeDTO) {
